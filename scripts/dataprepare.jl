@@ -72,7 +72,7 @@ end
 
 #%% 
 # save data for jdls2
-using JLD2
+using Feather
 
-outputpath = joinpath(pwd(), "processed_data", "processed_data.jld2")
-save_object(outputpath, dat)
+putpath = joinpath(pwd(), "processed_data", "processed_data.feather")
+Feather.write(putpath, dat)
